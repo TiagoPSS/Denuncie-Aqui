@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Thistle"
+    android:orientation="vertical"
+    tools:context="com.denucieaqui.android.gui.MainActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LayerTelaMain"
+            style="@style/LayerTela">
+
+            <LinearLayout
+                android:id="@+id/LayerConteudoMain"
+                style="@style/LayerContent">
+
+                <LinearLayout
+                    android:id="@+id/LayerImgONG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layer_top_content_shape"
+                    android:backgroundTint="@color/colorAccent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon_ong"
+                        android:contentDescription="@string/descricao_logo_cmc" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layerTextoApresentacaoMain"
+                    style="@style/LayerSubContent">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginBottom="7dp"
+                        android:text="@string/txt_welcome_main"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"></View>
+
+                <LinearLayout
+                    android:id="@+id/layerCategorias"
+                    style="@style/LayerSubContent">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:text="@string/txt_categoria_main" />
+
+                    <Spinner
+                        android:id="@+id/spnCategoria"
+                        style="@style/SpinnerCategorias"></Spinner>
+
+                    <TextView
+                        style="@style/TextView"
+                        android:text="@string/txt_tipo_main" />
+
+                    <Spinner
+                        android:id="@+id/spnTipo"
+                        style="@style/SpinnerCategorias"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProximoDenunciaEndereco"
+                style="@style/ButtonNext"
+                android:layout_marginBottom="7dp"
+                android:onClick="chamaDenunciaEndereco"
+                android:text="@string/btn_proximo" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

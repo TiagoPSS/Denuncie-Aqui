@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Thistle"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.denucieaqui.android.gui.DenunciaDescricaoActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LayerTelaDescricao"
+            style="@style/LayerTela">
+
+            <LinearLayout
+                android:id="@+id/LayerConteudoDescricao"
+                style="@style/LayerContent">
+
+                <LinearLayout
+                    android:id="@+id/LayerDescricaoComentario"
+                    style="@style/LayerSubContent">
+
+                    <TextView
+                        android:id="@+id/txtTitulo"
+                        style="@style/TextView"
+                        android:layout_marginTop="2dp"
+                        android:text="Comente sobre o problema.*" />
+
+                    <EditText
+                        android:id="@+id/textoDescricaoDenuncia"
+                        style="@style/EditText"
+                        android:hint="Por favor, descreva com detalhes o que está sendo denunciado. Quanto mais informações tiver, maior a probabilidade da resolução deste problema." />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"></View>
+
+                <LinearLayout
+                    android:id="@+id/LayerDescricaoMidia"
+                    style="@style/LayerSubContent"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fabGaleria"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:onClick="galeria"
+                        app:srcCompat="@drawable/icon_galeria4" />
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical"
+                        android:text="Insira fotos que auxiliem na resolução do problema."
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/image_previews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnDialogIdentificacao"
+                style="@style/ButtonNext"
+                android:onClick="chamaTelaDialogIdentificacao"
+                android:text="Denunciar"
+                android:layout_alignParentRight="true"/>
+
+            <Button
+                android:id="@+id/btnRemoveLastImage"
+                style="@style/ButtonNext"
+                android:onClick="removeALLImages"
+                android:text="Remover Fotos"
+                android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

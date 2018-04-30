@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categorias">
+        <item>Água e Energia</item>
+        <item>Segurança</item>
+    </string-array>
+
+    <string-array name="tipoAguaeEnergia">
+        <item>Falta de Água</item>
+        <item>Falta de energia</item>
+        <item>Fiação irregular</item>
+        <item>Iluminação pública irregular</item>
+    </string-array>
+
+    <string-array name="tipoSeguranca">
+        <item>Assalto</item>
+        <item>Drogas</item>
+        <item>Falta de Policiamento</item>
+        <item>Homicício</item>
+        <item>Invasão em propriedade particular</item>
+        <item>Ocupação de local público</item>
+    </string-array>
+
+    <string-array name="categorias_mapaDeCalor_array">
+        <item>@string/cat_seguranca</item>
+        <item>@string/cat_agua_energia</item>
+    </string-array>
+
+</resources>

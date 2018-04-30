@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Thistle"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.denucieaqui.android.gui.DenunciaEnderecoActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LayerTelaEndereco"
+            style="@style/LayerTela">
+
+            <LinearLayout
+                android:id="@+id/LayerConteudoEndereco"
+                style="@style/LayerContent">
+
+                <LinearLayout
+                    android:id="@+id/LayerEndereco"
+                    style="@style/LayerSubContent">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginTop="2dp"
+                        android:text="Onde está acontecendo o problema?" />
+
+                    <EditText
+                        android:id="@+id/textoEndereco"
+                        style="@style/EditText"
+                        android:hint="Endereço"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/textoReferencia"
+                        style="@style/EditText"
+                        android:hint="Referência"
+                        android:inputType="text" />
+
+                    <fragment
+                        android:id="@+id/mapa"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"></fragment>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProximoDenunciaDescricao"
+                style="@style/ButtonNext"
+                android:onClick="chamaTelaDenunciaDescricao"
+                android:text="Próximo" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LayerContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/layer_content_shape</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LayerSubContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/layer_content_shape</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ButtonNext">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">165dp</item>
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+</resources>
